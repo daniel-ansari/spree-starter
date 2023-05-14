@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_30_093612) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_11_173918) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -698,6 +698,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_093612) do
     t.jsonb "private_metadata"
     t.string "status", default: "draft", null: false
     t.datetime "make_active_at", precision: nil
+    t.text "internal_note"
     t.index ["available_on"], name: "index_spree_products_on_available_on"
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at"
     t.index ["discontinue_on"], name: "index_spree_products_on_discontinue_on"
